@@ -1,10 +1,13 @@
-int _putchar(char what_to_print)
-{
-    char str[] = "_putchar\n";
-    int i = 0;
+#include <unistd.h>
 
-    while (str[i] != '\0')
-    {
-        putchar(str[i]);
-        i++;
-    }
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
